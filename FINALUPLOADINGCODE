@@ -95,4 +95,40 @@ while True: #입력값 루프, 0 입력 시 루프 종료
     elif cnvt == 0:
         break
     else:
-        print("1(Comp) 2(Rev) 3(Rev_Comp)")
+        print("1(Comp) 2(Rev) 3(Rev_Comp)"
+
+ class Base : <br>
+    def __init__(self, k=[]) : <br>
+        self.bases = k <br>
+    def polymerase(self) : <br> # (1) DNA를 중합하는 함수
+        a = self.bases[::-1] <br>
+        b = [] <br>
+        for i in range(len(a)) : <br>
+            if a[i] == 'A' : <br>
+                b.append('T') <br>
+            elif a[i] == 'G' : <br>
+                b.append('C') <br>
+            elif a[i] == 'C' : <br>
+                b.append('G') <br>
+            elif a[i] == 'T' : <br>
+                b.append('A') <br>
+        for i in range(len(b)) : <br>
+            print(b[i], end = '') <br>
+        
+    def lyase(self) : # (2) DNA 1개의 염기를 지우는 함수
+        return self.bases[0:-1] 
+    def size(self) : # (3) DNA의 base pair의 수
+        return len(self.bases) 
+    def Dna_checker(self) : # (4) DNA가 맞는지 확인하는 함수
+        for i in range(len(self.bases)): 
+            if self.bases[i] == 'A': 
+                continue 
+            elif self.bases[i] == 'G':
+                continue <br>
+            elif self.bases[i] == 'C': 
+                continue 
+            elif self.bases[i] == 'T':
+                continue <br>
+        else: 
+            print('다음의 DNA는 존재하지 않습니다.')
+            return False 
